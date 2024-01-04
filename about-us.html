@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<header
+    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3  sticky-top bg-white container"
+    id="menubar">
+    <div class="col-md-3 mb-2 ">
+        <a href="index.html" class=" text-decoration-none">
+            <img src="https://placehold.co/80x30/?text=Logo" alt="" class="img-responsive" width="60%">
+        </a>
+    </div>
+
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center ">
+        <li class="nav-link"><a href="about-us.html" class=" px-2 ">About Us</a></li>
+        <li class="nav-link"><a href="services.html" class=" px-2">Services</a></li>
+        <li class="nav-link"><a href="packeges.html" class=" px-2">Packages</a></li>
+        <li class="nav-link"><a href="booking.html" class=" px-2">Booking</a></li>
+        <li class="nav-link"><a href="#contact" class=" px-2">Contact</a></li>
+    </ul>
+
+    <div class="col-md-3 text-end">
+        <button type="button" class="btn btn-outline-primary me-2">Login</button>
+        <button type="button" class="btn btn-primary">Sign-up</button>
+    </div>
+</header>
+<div class="container">
+
+    <section id="summary">
+        <div class="parallax " style="height: 25rem;">
+            <div class=" text-center ">
+                <div class="row justify-content-center my-1">
+                    <div class="col-8 my-5">
+                        <h1 class="text-white">My Company</h1>
+                        <p class="text-white"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore,
+                            dolorem.
+                        </p><br>
+                        <div>
+                            <button type="button" class="btn btn-primary mx-1">Speak to us</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="contact">
+        <div class=" row justify-content-center ">
+
+            <div class="col-8 ">
+                <h2 class="text-center"> Contact</h2>
+            </div>
+
+        </div>
+        <div class="row mb-3 ">
+            <div class="col-sm-4">
+                <div class="card shadow h-100 p-2">
+                    <div class="card-body  ">
+                        <h5 class="card-title">Location</h5>
+                        <p class="card-text">Area Details</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card shadow  h-100 p-2">
+                    <div class="card-body ">
+                        <h5 class="card-title">Email</h5>
+                        <p class="card-text">example@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card shadow  h-100 p-2 ">
+                    <div class="card-body  ">
+                        <h5 class="card-title">Phone</h5>
+                        <p class="card-text">+880 ********
+                            <br>
+                            +880 ********
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+</div>
+
+</body>
+
+<!-- Add the following script at the end of your HTML body, just before the closing </body> tag -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navbarHeight = document.getElementById("menubar").offsetHeight + 20; // Adjust the ID if needed
+
+        // Function to handle smooth scrolling and add margin for fixed navbar
+        function scrollToSection(sectionId) {
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                const targetPosition = targetSection.offsetTop - navbarHeight;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth",
+                });
+            }
+        }
+
+        // Attach click event listeners to navbar links
+        const navbarLinks = document.querySelectorAll("#menubar a.nav-link");
+        navbarLinks.forEach(function (link) {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+                const sectionId = link.getAttribute("href").substring(1);
+                scrollToSection(sectionId);
+            });
+        });
+    });
+</script>
+
+
+</html>
+</div>
